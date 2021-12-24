@@ -1,3 +1,4 @@
-kafka
+kafka-python
 dotenv
-tweepy
+tweepy==3.9.0
+pyspark

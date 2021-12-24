@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
-from kafka import KafkaProducer, producer
+from kafka import KafkaProducer
 import os
 
 load_dotenv()
@@ -16,7 +16,7 @@ producer = KafkaProducer(bootstrap_servers='localhost:9092')
 
 topic_name = 'twitterdata'
 
-class TwitterAuth():
+class twitterAuth():
     """Set up Twitter Authentication"""
     def authenticateTwitterApp(self):
         auth = OAuthHandler(consumer_key, consumer_secret)
@@ -25,6 +25,9 @@ class TwitterAuth():
 
 class TwitterStreamer():
     """Set up Streamer"""
+    def __init__(self):
+        self.twitterAuth = twitterAuth()
+
     def stream_tweets(self):
         while True:
             listener = ListenerTS()
