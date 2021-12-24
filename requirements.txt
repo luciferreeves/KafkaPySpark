@@ -1,4 +1,4 @@
 kafka-python
 dotenv
 tweepy==3.9.0
-pyspark
+pyspark==2.4.6
