@@ -28,7 +28,15 @@ consumer = KafkaConsumer(
     value_deserializer=lambda x: json.loads(x.decode('utf-8')))
 
 for msg in consumer:
-    print(json.loads(json.dumps(msg.value)))
+    message = json.loads(json.dumps(msg.value))
+    try:
+        print(message['extended_tweet']['full_text'])
+    except:
+        try:
+            print(message['text'])
+        except:
+            print(message)
+    print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
 # spark = SparkSession.builder.master("local").appName("Tweets").getOrCreate()
 # sc = spark.sparkContext

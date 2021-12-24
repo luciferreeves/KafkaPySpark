@@ -33,7 +33,7 @@ class TwitterStreamer():
             listener = ListenerTS()
             auth = self.twitterAuth.authenticateTwitterApp()
             stream = Stream(auth, listener)
-            stream.filter(track=["Apple"], stall_warnings=True, languages= ["en"])
+            stream.filter(track=["Christmas"], stall_warnings=True, languages= ["en"])
 
 class ListenerTS(StreamListener):
 
