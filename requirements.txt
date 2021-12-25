@@ -1,7 +1,7 @@
 kafka-python
 python-dotenv
 tweepy==3.9.0
-pyspark==2.4.6
+pyspark==3.0.2
 spacy
 sklearn
 cassandra-driver
