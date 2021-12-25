@@ -1,4 +1,4 @@
-from kafka import KafkaConsumer, TopicPartition
+from kafka import KafkaConsumer
 import json
 import re
 from database_configuration import insert_tweet
