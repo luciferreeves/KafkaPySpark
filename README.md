@@ -1,4 +1,4 @@
-# KafkaPySpark
+# Live Tweet Sentiment Analysis using Kafka and PySpark
 ## Zookeeper
 ```
 bin/zookeeper-server-start.sh config/zookeeper.properties
